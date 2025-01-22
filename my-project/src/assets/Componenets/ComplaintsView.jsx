@@ -15,7 +15,7 @@ const ComplaintsView = () => {
     setError('');
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_BACKEND_URL}/complaints/supervisor/${filter}/${category}`
+        `${process.env.REACT_APP_BACKEND_URL}/complaints/supervisor/:${category}`
       );
       setComplaints(response.data);
     } catch (err) {
